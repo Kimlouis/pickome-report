@@ -5,7 +5,7 @@
   <title>발품리포트</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Pretendard';
       margin: 0;
       display: flex;
       justify-content: center;
@@ -15,13 +15,14 @@
 
     .report-container {
       margin: 80px 0;
-      width: 90%;
+      width: 95%;
       max-width: 600px;
       background-color: #f4f4f4;
       padding: 30px;
       border-radius: 5px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
+
     .title {
       text-align: left;
       margin: 0 0 10px 0;
@@ -29,10 +30,15 @@
       font-size: 30px;
     }
 
-    h3 {
-
-      margin: 0 10px 0 0;
+    .question {
+      font-size: 15px;
+      font-weight: 500;
     }
+
+    .answer {
+      font-size: 15px;
+    }
+
     h5 {
       font-size: 14px;
       font-weight: 300;
@@ -94,9 +100,11 @@
     }
 
     .print-button button {
+      font-family: 'Pretendard';
       padding: 10px 20px;
-      background-color: #4caf50;
+      background-color: #E5491A;
       color: #fff;
+      font-weight: 500;
       border: none;
       border-radius: 5px;
       font-size: 16px;
@@ -113,7 +121,11 @@
     }
     .half-layout {
       display: flex;
-      margin: 10px 0;
+      margin: 12px 0;
+    }
+    .half-layout-last {
+      display: flex;
+      margin: 12px 0 32px 0;
     }
     .list2 {
       flex: 1;
@@ -122,9 +134,9 @@
       text-align: left;
     }
     .list2 .icon{
-      width: 14px;
-      height: 14px;
-      margin-right: 10px;
+      width: 20px;
+      height: 20px;
+      margin-right: 6px;
     }
     .url {
       font-size: 12px;
@@ -132,6 +144,9 @@
     .sub-title {
       font-size: 17px;
       font-weight: 600;
+    }
+    .logo img{
+      width: 150px;
     }
 
 
@@ -164,6 +179,7 @@
     }
   </style>
   <meta name="viewport" content="user-scalable=no, initial-scale=0.8, maximum-scale=0.8, minimum-scale=0.8, width=device-width">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
 </head>
 
 <body>
@@ -173,27 +189,29 @@
         <div class="title">발품리포트</div>
         <h5>보고서번호 : 0000000</h5>
       </div>
-    <img src="image1.jpg" alt="로고">
+      <div class="logo">
+        <img src="../pickome-report/img/logo.png" ait="로고">
+      </div>
     </div>
 
     <div class="form-group">
       <label>발품내용</label>
       <hr class="divider">
       <div class="checklist">
-        <h3>픽커</h3>
-        <p>김픽콤</p>
+        <div class="question">픽커</div>
+        <div class="answer">김픽콤</div>
       </div>
       <div class="checklist">
-        <h3>임장일자</h3>
-        <p>2023.06.31 오전 10시</p>
+        <div class="question">임장일자</div>
+        <div class="answer">2023.06.31 오전 10시</div>
       </div>
       <div class="checklist">
-        <h3>임장당일날씨</h3>
-        <p>맑음</p>
+        <div class="question">임장당일날씨</div>
+        <div class="answer">맑음</div>
       </div>
       <div class="checklist">
-        <h3>발품플랜</h3>
-        <p>베이직플랜</p>
+        <div class="question">발품플랜</div>
+        <div class="answer">베이직플랜</div>
       </div>
       <hr class="divider">
     </div>
@@ -202,64 +220,322 @@
       <label>요청매물정보</label>
       <hr class="divider">
       <div class="checklist">
-        <h3>매물URL</h3>
-        <div class="url">https://www.realestate.com/home/officetel/items/123456</div>
+        <div class="list2">
+          <img src="../pickome-report/img/link.png" alt="링크" class="icon">
+          <div class="answer">매물url</div>
+        </div>
+        <a href="https://www.realestate.com/home/officetel/items/123456" class="url">https://www.realestate.com/home/officetel/items/123456</a>
       </div>
       <div class="half-layout">
         <div class="list2">
-          <img src="image1.jpg" alt="아이콘" class="icon">
-          <p>서울 종로구 사직로 161</p>
+          <img src="../pickome-report/img/map.png" alt="위치" class="icon">
+          <div class="answer">서울 종로구 사직로 161</div>
         </div>
         <div class="list2">
-          <img src="image1.jpg" alt="아이콘" class="icon">
-          <p>남향</p>
+          <img src="../pickome-report/img/ewsn.png" alt="향" class="icon">
+          <div class="answer">남향</div>
         </div>
       </div>
       <div class="half-layout">
         <div class="list2">
-          <img src="image1.jpg" alt="아이콘" class="icon">
-          <p>분리형 원룸</p>
+          <img src="../pickome-report/img/layout.png" alt="구조" class="icon">
+          <div class="answer">분리형 원룸</div>
         </div>
         <div class="list2">
-          <img src="image1.jpg" alt="아이콘" class="icon">
-          <p>픽콤 공인중개사무소</p>
+          <img src="../pickome-report/img/business.png" alt="중개사" class="icon">
+          <div class="answer">픽콤 공인중개사무소</div>
         </div>
       </div>
       <hr class="divider">
     </div>
 
     <div class="form-group">
-      <label>요청매물정보</label>
+      <label>체크리스트</label>
       <hr class="divider">
+
       <div class="checklist">
         <div class="sub-title">01. 입주관련</div>
       </div>
       <div class="half-layout">
         <div class="list2">
-          <h3>1-1. 실제 가격</h3>
+          <div class="question">1-1. 실제 가격</div>
         </div>
         <div class="list2">
-          <p>[보증금 1000만원][월세 50만원]</p>
+          <div class="answer">보증금 1000만원 · 월세 50만원</div>
         </div>
       </div>
       <div class="half-layout">
         <div class="list2">
-          <h3>1-2. 입주 가능 시기</h3>
+          <div class="question">1-2. 입주 가능 시기</div>
         </div>
         <div class="list2">
-          <p>바로 입주가능</p>
+          <div class="answer">바로 입주가능</div>
         </div>
       </div>
       <div class="half-layout">
         <div class="list2">
-          <h3>1-3. 관리비</h3>
+          <div class="question">1-3. 관리비</div>
         </div>
         <div class="list2">
-          <p>[월 10만원][전기세, 수도세 포함]</p>
+          <div class="answer">월 10만원 · 전기세, 수도세 포함</div>
         </div>
       </div>
+      <div class="half-layout-last">
+        <div class="list2">
+          <div class="question">1-4. 입주 애로사항</div>
+        </div>
+        <div class="list2">
+          <div class="answer">보증금 대출 안됨</div>
+        </div>
+      </div>
+
       <hr class="divider">
+
+      <div class="checklist">
+        <div class="sub-title">02. 기본정보</div>
+      </div>
+      <div class="half-layout">
+        <div class="list2">
+          <div class="question">2-1. 상세주소</div>
+        </div>
+        <div class="list2">
+          <div class="answer">서울특별시 강남구 남부순환로 2730, 2층</div>
+        </div>
+      </div>
+      <div class="half-layout-last">
+        <div class="list2">
+          <div class="question">2-2. 난방종류</div>
+        </div>
+        <div class="list2">
+          <div class="answer">중앙난방</div>
+        </div>
+      </div>
+      
+      <hr class="divider">
+
+      <div class="checklist">
+        <div class="sub-title">03. 건물 내·외부</div>
+      </div>
+      <div class="half-layout">
+        <div class="list2">
+          <div class="question">3-1. 건물단지 및 주변청결도</div>
+        </div>
+        <div class="list2">
+          <div class="answer">분리수거 및 쓰레기 배출 시설은 존재하지만, 쓰레기 및 청결 관리가 부족한 편</div>
+        </div>
+      </div>
+      <div class="half-layout">
+        <div class="list2">
+          <div class="question">3-2. 주차장 종류</div>
+        </div>
+        <div class="list2">
+          <div class="answer">지상 별도 주차장</div>
+        </div>
+      </div>
+      <div class="half-layout">
+        <div class="list2">
+          <div class="question">3-3. 최대 주차 대수</div>
+        </div>
+        <div class="list2">
+          <div class="answer">1대</div>
+        </div>
+      </div>
+      <div class="half-layout">
+        <div class="list2">
+          <div class="question">3-4. 건물보안시설</div>
+        </div>
+        <div class="list2">
+          <div class="answer">CCTV · 현관보안키</div>
+        </div>
+      </div>
+      <div class="half-layout">
+        <div class="list2">
+          <div class="question">3-5. 엘레베이터 유무</div>
+        </div>
+        <div class="list2">
+          <div class="answer">있음</div>
+        </div>
+      </div>
+      <div class="half-layout">
+        <div class="list2">
+          <div class="question">3-6. 건물 내 시설</div>
+        </div>
+        <div class="list2">
+          <div class="answer">없음</div>
+        </div>
+      </div>
+      <div class="half-layout">
+        <div class="list2">
+          <div class="question">3-7. 내부 CCTV</div>
+        </div>
+        <div class="list2">
+          <div class="answer">출입구 · 엘레베이터 · 복도</div>
+        </div>
+      </div>
+      <div class="half-layout">
+        <div class="list2">
+          <div class="question">3-8. 한층당 세대 수</div>
+        </div>
+        <div class="list2">
+          <div class="answer">3세대</div>
+        </div>
+      </div>
+      <div class="half-layout-last">
+        <div class="list2">
+          <div class="question">3-9. 집 문 잠금장치</div>
+        </div>
+        <div class="list2">
+          <div class="answer">도어락</div>
+        </div>
+      </div>
+      
+      <hr class="divider">
+
+      <div class="checklist">
+        <div class="sub-title">04. 집 내부</div>
+      </div>
+      <div class="half-layout">
+        <div class="list2">
+          <div class="question">현관. 타입</div>
+        </div>
+        <div class="list2">
+          <div class="answer">분리형 현관</div>
+        </div>
+      </div>
+      <div class="half-layout">
+        <div class="list2">
+          <div class="question">현관. 시설</div>
+        </div>
+        <div class="list2">
+          <div class="answer">별도신발장 · 거울 · 센서등</div>
+        </div>
+      </div>
+      <div class="half-layout">
+        <div class="list2">
+          <div class="question">현관. 신발장 크기</div>
+        </div>
+        <div class="list2">
+          <div class="answer">10켤레 이하</div>
+        </div>
+      </div>
+      <div class="half-layout-last">
+        <div class="list2">
+          <div class="question">현관. 사진</div>
+        </div>
+        <div class="list2">
+          <div class="answer">..</div>
+        </div>
+      </div>
+      <div class="half-layout">
+        <div class="list2">
+          <div class="question">공통. 인테리어 컨디션</div>
+        </div>
+        <div class="list2">
+          <div class="answer">신축, 리모델링의 이유로 모든 마감재가 새것임</div>
+        </div>
+      </div>
+      <div class="half-layout">
+        <div class="list2">
+          <div class="question">공통. 통신 옵션</div>
+        </div>
+        <div class="list2">
+          <div class="answer">공유기 · TV</div>
+        </div>
+      </div>
+      <div class="half-layout-last">
+        <div class="list2">
+          <div class="question">공통. 채광</div>
+        </div>
+        <div class="list2">
+          <div class="answer">햇볕이 적당히 듬</div>
+        </div>
+      </div>
+      <div class="half-layout">
+        <div class="list2">
+          <div class="question">방. 가전·가구 옵션</div>
+        </div>
+        <div class="list2">
+          <div class="answer">TV · 매립형시스템에어컨 · 수납장 · 책상 · 의자 · 수납장 · 침대 · 옷장 </div>
+        </div>
+      </div>
+      <div class="half-layout">
+        <div class="list2">
+          <div class="question">방. 공간 특이사항 및 하자</div>
+        </div>
+        <div class="list2">
+          <div class="answer">곰팡이 · 도배 및 장판 찢어짐</div>
+        </div>
+      </div>
+      <div class="half-layout">
+        <div class="list2">
+          <div class="question">방. 붙어있는 부가공간</div>
+        </div>
+        <div class="list2">
+          <div class="answer">테라스 · 화장실</div>
+        </div>
+      </div>
+      <div class="half-layout-last">
+        <div class="list2">
+          <div class="question">방. 공간사진</div>
+        </div>
+        <div class="list2">
+          <div class="answer">--</div>
+        </div>
+      </div>
+      <div class="half-layout">
+        <div class="list2">
+          <div class="question">주방. 구조</div>
+        </div>
+        <div class="list2">
+          <div class="answer">분리형 주방</div>
+        </div>
+      </div>
+      <div class="half-layout">
+        <div class="list2">
+          <div class="question">주방. 가전옵션</div>
+        </div>
+        <div class="list2">
+          <div class="answer">전자레인지 · 냉장고</div>
+        </div>
+      </div>
+      <div class="half-layout">
+        <div class="list2">
+          <div class="question">주방. 시설가구 옵션</div>
+        </div>
+        <div class="list2">
+          <div class="answer">조리대 · 온수 · 환풍기 · 2인식탁</div>
+        </div>
+      </div>
+      <div class="half-layout">
+        <div class="list2">
+          <div class="question">주방. 세면대 종류</div>
+        </div>
+        <div class="list2">
+          <div class="answer">2구</div>
+        </div>
+      </div>
+      <div class="half-layout-last">
+        <div class="list2">
+          <div class="question">주방. 가열장치 종류</div>
+        </div>
+        <div class="list2">
+          <div class="answer">인덕션 · 2구</div>
+        </div>
+      </div>
+      <div class="half-layout">
+        <div class="list2">
+          <div class="question">세탁. 시설 형태 혹은 위치</div>
+        </div>
+        <div class="list2">
+          <div class="answer">독립 세탁실</div>
+        </div>
+      </div>
+
+      
+    <hr class="divider">
+
     </div>
+
 
     <!-- <div class="form-group">
       <label>실험 제목:</label>
