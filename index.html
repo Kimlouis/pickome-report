@@ -15,20 +15,22 @@
 
     .report-container {
       margin: 80px 0;
-      width: 98%;
+      width: 90%;
       max-width: 600px;
       background-color: #f4f4f4;
       padding: 30px;
       border-radius: 5px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
-
-    h1 {
+    .title {
       text-align: left;
       margin: 0 0 10px 0;
+      font-weight: 600;
+      font-size: 30px;
     }
+
     h3 {
-      font-size: 14px;
+
       margin: 0 10px 0 0;
     }
     h5 {
@@ -125,7 +127,7 @@
       margin-right: 10px;
     }
     .url {
-      font-size: 10px;
+      font-size: 12px;
     }
     .sub-title {
       font-size: 17px;
@@ -134,6 +136,7 @@
 
 
     /* Print Styles */
+    
     @media print {
       body * {
         visibility: hidden;
@@ -160,13 +163,14 @@
       }
     }
   </style>
+  <meta name="viewport" content="user-scalable=no, initial-scale=0.8, maximum-scale=0.8, minimum-scale=0.8, width=device-width">
 </head>
 
 <body>
   <div class="report-container">
     <div class="report-title">
       <div>
-        <h1>발품리포트</h1>
+        <div class="title">발품리포트</div>
         <h5>보고서번호 : 0000000</h5>
       </div>
     <img src="image1.jpg" alt="로고">
