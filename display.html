@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>발품리포트</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: auto;
+    }
+
+    .report-container {
+      margin: 80px 0;
+      width: 98%;
+      max-width: 600px;
+      background-color: #f4f4f4;
+      padding: 30px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: left;
+      margin: 0 0 10px 0;
+    }
+    h3 {
+      font-size: 14px;
+      margin: 0 10px 0 0;
+    }
+    h5 {
+      font-size: 14px;
+      font-weight: 300;
+      margin: 0;
+    }
+
+    .report-title {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 90px;
+    }
+
+    .form-group {
+      margin-bottom: 40px;
+    }
+
+    .form-group label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 5px;
+      font-size: 22px;
+    }
+
+    .form-group p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .results-section {
+      margin-top: 30px;
+    }
+
+    .results-section h2 {
+      margin-bottom: 10px;
+    }
+
+    .results-section img {
+      display: block;
+      max-width: 100%;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .discussion-section {
+      margin-top: 30px;
+    }
+
+    .discussion-section h2 {
+      margin-bottom: 10px;
+    }
+
+    .discussion-section p {
+      margin-top: 0;
+    }
+
+    .print-button {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .print-button button {
+      padding: 10px 20px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .divider {
+        border-top: 1px solid #000000;
+    }
+    .checklist {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 10px 0;
+    }
+    .half-layout {
+      display: flex;
+      margin: 10px 0;
+    }
+    .list2 {
+      flex: 1;
+      align-items: center;
+      display: flex;
+      text-align: left;
+    }
+    .list2 .icon{
+      width: 14px;
+      height: 14px;
+      margin-right: 10px;
+    }
+    .url {
+      font-size: 10px;
+    }
+    .sub-title {
+      font-size: 17px;
+      font-weight: 600;
+    }
+
+
+    /* Print Styles */
+    @media print {
+      body * {
+        visibility: hidden;
+      }
+
+      .report-container,
+      .report-container * {
+        visibility: visible;
+      }
+
+      .report-container {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        box-shadow: none;
+        border-radius: 0;
+      }
+
+      .print-button {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="report-container">
+    <div class="report-title">
+      <div>
+        <h1>발품리포트</h1>
+        <h5>보고서번호 : 0000000</h5>
+      </div>
+    <img src="image1.jpg" alt="로고">
+    </div>
+
+    <div class="form-group">
+      <label>발품내용</label>
+      <hr class="divider">
+      <div class="checklist">
+        <h3>픽커</h3>
+        <p>김픽콤</p>
+      </div>
+      <div class="checklist">
+        <h3>임장일자</h3>
+        <p>2023.06.31 오전 10시</p>
+      </div>
+      <div class="checklist">
+        <h3>임장당일날씨</h3>
+        <p>맑음</p>
+      </div>
+      <div class="checklist">
+        <h3>발품플랜</h3>
+        <p>베이직플랜</p>
+      </div>
+      <hr class="divider">
+    </div>
+
+    <div class="form-group">
+      <label>요청매물정보</label>
+      <hr class="divider">
+      <div class="checklist">
+        <h3>매물URL</h3>
+        <div class="url">https://www.realestate.com/home/officetel/items/123456</div>
+      </div>
+      <div class="half-layout">
+        <div class="list2">
+          <img src="image1.jpg" alt="아이콘" class="icon">
+          <p>서울 종로구 사직로 161</p>
+        </div>
+        <div class="list2">
+          <img src="image1.jpg" alt="아이콘" class="icon">
+          <p>남향</p>
+        </div>
+      </div>
+      <div class="half-layout">
+        <div class="list2">
+          <img src="image1.jpg" alt="아이콘" class="icon">
+          <p>분리형 원룸</p>
+        </div>
+        <div class="list2">
+          <img src="image1.jpg" alt="아이콘" class="icon">
+          <p>픽콤 공인중개사무소</p>
+        </div>
+      </div>
+      <hr class="divider">
+    </div>
+
+    <div class="form-group">
+      <label>요청매물정보</label>
+      <hr class="divider">
+      <div class="checklist">
+        <div class="sub-title">01. 입주관련</div>
+      </div>
+      <div class="half-layout">
+        <div class="list2">
+          <h3>1-1. 실제 가격</h3>
+        </div>
+        <div class="list2">
+          <p>[보증금 1000만원][월세 50만원]</p>
+        </div>
+      </div>
+      <div class="half-layout">
+        <div class="list2">
+          <h3>1-2. 입주 가능 시기</h3>
+        </div>
+        <div class="list2">
+          <p>바로 입주가능</p>
+        </div>
+      </div>
+      <div class="half-layout">
+        <div class="list2">
+          <h3>1-3. 관리비</h3>
+        </div>
+        <div class="list2">
+          <p>[월 10만원][전기세, 수도세 포함]</p>
+        </div>
+      </div>
+      <hr class="divider">
+    </div>
+
+    <!-- <div class="form-group">
+      <label>실험 제목:</label>
+      <p>토마토 식물의 성장에 다른 온도 수준의 영향 조사</p>
+    </div>
+
+    <div class="form-group">
+      <label>실험 과정:</label>
+      <ol>
+        <li>동일한 조건으로 네 개의 토마토 식물 그룹을 설정했습니다.</li>
+        <li>각 그룹은 다른 온도 범위에 노출되었습니다: 1 그룹은 20°C, 2 그룹은 25°C, 3 그룹은 30°C, 4 그룹은 35°C입니다.</li>
+        <li>식물들은 동일한 조명과 관수 조건 하에 배치되었습니다.</li>
+        <li>식물의 높이와 잎의 개수를 3일마다 4주 동안 기록했습니다.</li>
+        <li>식물들은 정기적으로 관수되며 적절한 영양분을 공급받았습니다.</li>
+      </ol>
+    </div>
+
+    <div class="results-section">
+      <h2>결과</h2>
+      <p>다음 이미지는 각 온도 그룹의 토마토 식물 성장 진행 상황을 보여줍니다:</p>
+      <img src="image1.jpg" alt="온도 그룹 1">
+      <img src="image2.jpg" alt="온도 그룹 2">
+      <img src="image3.jpg" alt="온도 그룹 3">
+      <img src="image4.jpg" alt="온도 그룹 4">
+    </div>
+
+    <div class="discussion-section">
+      <h2>토론</h2>
+      <p>결과는 온도가 토마토 식물의 성장에 상당한 영향을 미쳤음을 보여줍니다. 30°C에 노출된 3 그룹은 높이와 잎의 개수 측면에서 가장 높은 성장률을 보였습니다. 1 그룹과 2 그룹은 중간 성장을 보였으며, 35°C에 노출된 4 그룹은 가장 느린 성장을 보였습니다.</p>
+      <p>이러한 결과는 일정 범위 내의 온도가 토마토 식물 성장에 긍정적인 영향을 미치며, 성장을 극대화하기 위한 최적 온도는 30°C입니다. 이 온도 이상의 고온은 부작용을 일으킬 수 있고 성장을 방해할 수 있습니다.</p>
+      <p>더 많은 분석과 통계적 검증을 통해 이러한 관찰을 검증하고 결과의 유의성을 확인할 예정입니다.</p>
+    </div> -->
+
+    <div class="print-button">
+      <button onclick="window.print()">PDF로 출력하기</button>
+    </div>
+  </div>
+</body>
+
+</html>
